@@ -11,48 +11,48 @@ rocketmq 4.7.1
 
 #### 安装教程
 
-1.  下载rocketmq 4.7.1客户端
-    下载地址：https://www.apache.org/dyn/closer.cgi?path=rocketmq/4.7.1/rocketmq-all-4.7.1-bin-release.zip
-    解压压缩包
-2.  打开D:\rocketmq-all-4.7.1\conf目录下的broker.conf文件，添加下面两行内容
-    namesrvAddr = 127.0.0.1:9876
-    brokerIP1 = 127.0.0.1
-3.  进入rocketmq-all-4.7.1\bin目录，
-    打开runbroker.cmd文件，liunx系统改为.sh文件
-    修改内容：set "JAVA_OPT=%JAVA_OPT% -server -Xms100m -Xmx100m -Xmn50m"
-    打开runserver.cmd文件，
-    修改内容：set "JAVA_OPT=%JAVA_OPT% -server -Xms100m -Xmx100m -Xmn50m -XX:MetaspaceSize=12m -XX:MaxMetaspaceSize=32m"
-    打开tools.cmd文件，
-    修改内容：set "JAVA_OPT=%JAVA_OPT% -server -Xms100m -Xmx100m -Xmn25m -XX:MetaspaceSize=12m -XX:MaxMetaspaceSize=32m"
-3.  选择部署控制台rocketmq-console
-    原始仓库地址：https://github.com/apache/rocketmq-externals.git
-    码云仓库地址：https://gitee.com/mirrors/RocketMQ-Externals.git
-    修改application.properties文件，修改以下三行内容：
-    server.servlet.context-path=/rocketmq
-    server.port=xxxx
-    rocketmq.config.namesrvAddr=127.0.0.1:9876
-4.  springboot工程maven引入依赖
-    <dependency>
-      <groupId>org.apache.rocketmq</groupId>
-      <artifactId>rocketmq-spring-boot-starter</artifactId>
-      <version>2.1.1</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.rocketmq</groupId>
-      <artifactId>rocketmq-client</artifactId>
-      <version>4.7.1</version>
-    </dependency>
+1.  下载rocketmq 4.7.1客户端  
+    下载地址：https://www.apache.org/dyn/closer.cgi?path=rocketmq/4.7.1/rocketmq-all-4.7.1-bin-release.zip  
+    解压压缩包  
+2.  打开D:\rocketmq-all-4.7.1\conf目录下的broker.conf文件，添加下面两行内容  
+    namesrvAddr = 127.0.0.1:9876  
+    brokerIP1 = 127.0.0.1  
+3.  进入rocketmq-all-4.7.1\bin目录， 
+    打开runbroker.cmd文件，liunx系统改为.sh文件  
+    修改内容：set "JAVA_OPT=%JAVA_OPT% -server -Xms100m -Xmx100m -Xmn50m"  
+    打开runserver.cmd文件，  
+    修改内容：set "JAVA_OPT=%JAVA_OPT% -server -Xms100m -Xmx100m -Xmn50m -XX:MetaspaceSize=12m -XX:MaxMetaspaceSize=32m"  
+    打开tools.cmd文件，  
+    修改内容：set "JAVA_OPT=%JAVA_OPT% -server -Xms100m -Xmx100m -Xmn25m -XX:MetaspaceSize=12m -XX:MaxMetaspaceSize=32m"  
+3.  选择部署控制台rocketmq-console  
+    原始仓库地址：https://github.com/apache/rocketmq-externals.git  
+    码云仓库地址：https://gitee.com/mirrors/RocketMQ-Externals.git  
+    修改application.properties文件，修改以下三行内容：  
+    server.servlet.context-path=/rocketmq  
+    server.port=xxxx  
+    rocketmq.config.namesrvAddr=127.0.0.1:9876  
+4.  springboot工程maven引入依赖  
+    <dependency>  
+      <groupId>org.apache.rocketmq</groupId>  
+      <artifactId>rocketmq-spring-boot-starter</artifactId>  
+      <version>2.1.1</version>  
+    </dependency>  
+    <dependency>  
+      <groupId>org.apache.rocketmq</groupId>  
+      <artifactId>rocketmq-client</artifactId>  
+      <version>4.7.1</version>  
+    </dependency>  
 
 #### 使用说明
-1.  启动rocketmq：
-    cd rocketmq-all-4.7.1\bin目录，执行下面两个命令分别启动
-    start mqnamesrv.cmd
-    start mqbroker.cmd -n 127.0.0.1:9876 autoCreateTopicEnable=true
-2.  启动rocketmq-console：
-    cd rocketmq-externals/rocketmq-connect-console目录下，
-    执行打包命令：mvn clean package -Dmaven.test.skip=true
-    运行jar包，target目录下执行：java -jar rocketmq-console-ng-2.0.0.jar
-3.  idea或eclipse导入spring-boot-rockeqmq工程启动或打包运行
+1.  启动rocketmq：  
+    cd rocketmq-all-4.7.1\bin目录，执行下面两个命令分别启动  
+    start mqnamesrv.cmd  
+    start mqbroker.cmd -n 127.0.0.1:9876 autoCreateTopicEnable=true  
+2.  启动rocketmq-console：  
+    cd rocketmq-externals/rocketmq-connect-console目录下，  
+    执行打包命令：mvn clean package -Dmaven.test.skip=true  
+    运行jar包，target目录下执行：java -jar rocketmq-console-ng-2.0.0.jar  
+3.  idea或eclipse导入spring-boot-rockeqmq工程启动或打包运行  
 
 #### 参与贡献
 
