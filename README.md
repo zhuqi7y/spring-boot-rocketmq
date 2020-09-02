@@ -32,7 +32,9 @@ rocketmq 4.7.1
     server.port=xxxx  
     rocketmq.config.namesrvAddr=127.0.0.1:9876  
 4.  springboot工程maven引入依赖  
-    <dependency>  
+    
+```
+<dependency>  
       <groupId>org.apache.rocketmq</groupId>  
       <artifactId>rocketmq-spring-boot-starter</artifactId>  
       <version>2.1.1</version>  
@@ -41,7 +43,9 @@ rocketmq 4.7.1
       <groupId>org.apache.rocketmq</groupId>  
       <artifactId>rocketmq-client</artifactId>  
       <version>4.7.1</version>  
-    </dependency>  
+    </dependency>
+```
+  
 
 #### 使用说明
 1.  启动rocketmq：  
