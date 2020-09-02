@@ -34,7 +34,7 @@ rocketmq 4.7.1
 4.  springboot工程maven引入依赖  
     
 ```
-<dependency>  
+    <dependency>  
       <groupId>org.apache.rocketmq</groupId>  
       <artifactId>rocketmq-spring-boot-starter</artifactId>  
       <version>2.1.1</version>  
